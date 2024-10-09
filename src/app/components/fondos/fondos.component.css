@@ -1,0 +1,22 @@
+.fondos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+mat-card {
+  width: 300px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+mat-card-title {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+mat-card-content p {
+  font-size: 1em;
+  color: #555;
+}

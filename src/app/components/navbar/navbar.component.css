@@ -1,0 +1,18 @@
+mat-toolbar {
+  background-color: #3f51b5;  /* Fondo azul oscuro */
+color: white;
+}
+
+button {
+  background-color: #5c6bc0;  /*Fondo de los botones, azul más claro*/
+color: white;  /*Texto blanco*/
+border-radius: 4px;  /*Bordes redondeados para mejor apariencia*/
+padding: 8px 16px;  /* Aumentar el espacio interno del botón  */
+font-weight: bold;  /* Hacer el texto más grueso para mayor visibilidad */
+margin-left: 10px;  /* Espacio entre botones */
+transition: background-color 0.3s ease;  /* Transición suave en hover */
+}
+
+button:hover {
+  background-color: #3949ab;  /*Cambio de color cuando el mouse está sobre el botón*/
+}

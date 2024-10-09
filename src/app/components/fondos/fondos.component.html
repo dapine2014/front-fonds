@@ -1,0 +1,15 @@
+<div class="fondos-container" *ngIf="fondos.length > 0">
+  <mat-card *ngFor="let fondo of fondos">
+    <mat-card-header>
+      <mat-card-title>{{ fondo.nombre }}</mat-card-title>
+      <mat-card-subtitle>{{ fondo.categoria }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Monto mínimo: {{ fondo.montoMinimo | currency:'COP':'symbol':'1.0-0'  }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <!--<button mat-raised-button color="primary" (click)="suscribir(fondo.id)">Suscribirse</button>
+      <button mat-raised-button color="warn" (click)="cancelar(fondo.id)">Cancelar</button> -->
+    </mat-card-actions>
+  </mat-card>
+</div>
