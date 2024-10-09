@@ -8,8 +8,8 @@
       <p>Monto mínimo: {{ fondo.montoMinimo | currency:'COP':'symbol':'1.0-0'  }}</p>
     </mat-card-content>
     <mat-card-actions>
-      <!--<button mat-raised-button color="primary" (click)="suscribir(fondo.id)">Suscribirse</button>
-      <button mat-raised-button color="warn" (click)="cancelar(fondo.id)">Cancelar</button> -->
+      <button mat-raised-button color="primary" (click)="registrar(fondo.id)">Suscribirse</button>
+      <button mat-raised-button color="warn" (click)="cancelar(fondo.id)">Cancelar</button>
     </mat-card-actions>
   </mat-card>
 </div>

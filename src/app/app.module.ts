@@ -9,7 +9,16 @@ import { SuscripcionComponent } from './components/suscripcion/suscripcion.compo
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {MatCard, MatCardActions, MatCardContent, MatCardHeader} from '@angular/material/card';
 import {NavbarComponent} from './components/navbar/navbar.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import {
+  MatCell,
+  MatCellDef,
+  MatColumnDef, MatHeaderCell,
+  MatHeaderCellDef, MatHeaderRow,
+  MatHeaderRowDef, MatRow,
+  MatRowDef,
+  MatTable
+} from '@angular/material/table';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +34,18 @@ import {NavbarComponent} from './components/navbar/navbar.component';
     MatCardContent,
     MatCardActions,
     FondosComponent,
-    MatToolbarModule
+    MatToolbarModule,
+    HttpClientModule,
+    MatTable,
+    MatColumnDef,
+    MatHeaderCellDef,
+    MatCellDef,
+    MatHeaderRowDef,
+    MatRowDef,
+    MatHeaderCell,
+    MatCell,
+    MatHeaderRow,
+    MatRow
   ],
   providers: [
     provideClientHydration(),
