@@ -10,6 +10,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import {MatCard, MatCardActions, MatCardContent, MatCardHeader} from '@angular/material/card';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
+import {ConfiguracionComponent} from './components/configuracion/configuracion.component';
 import {
   MatCell,
   MatCellDef,
@@ -24,9 +25,11 @@ import {
     AppComponent,
     NavbarComponent,
     HistorialComponent,
-    SuscripcionComponent
+    SuscripcionComponent,
+
   ],
   imports: [
+    ConfiguracionComponent,
     BrowserModule,
     AppRoutingModule,
     MatCard,

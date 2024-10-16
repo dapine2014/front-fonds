@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import { map } from 'rxjs/operators';
+import {environmentProd} from "../../environments/environment.prod"
 import {IUser} from '../components/core/IUser';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FondoService {
-  private apiUrl: string = 'http://localhost:8080/rest/api';
+  private apiUrl: string =`${environmentProd.apiServiceUrl}`;
   private userId: string = "b57dfe3d-cc60-47e0-bc62-bce22178c4d5";
 
   constructor(private http: HttpClient) {
@@ -18,9 +18,11 @@ export class FondoService {
   }
 
   suscribirFondo( fondoId: string): Observable<any> {
+    const notificationType = sessionStorage.getItem('notificationType') || 'email'; // Valor por defecto 'email' si no está en la sesión
     const body = {
       userId: this.userId,
-      fundId: fondoId
+      fundId: fondoId,
+      typo: notificationType
     };
     console.log("BODY : ",body);
     console.log("uri: " + this.apiUrl);
@@ -29,9 +31,11 @@ export class FondoService {
 
 
   cancelarSuscripcion(fondoId: string): Observable<any>{
+    const notificationType = sessionStorage.getItem('notificationType') || 'email'; // Valor por defecto 'email' si no está en la sesión
     const body = {
       userId: this.userId,
-      fundId: fondoId
+      fundId: fondoId,
+      typo: notificationType
     };
     return this.http.post(`${this.apiUrl}/unsubscribe`, body);
   }

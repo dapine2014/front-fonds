@@ -1,0 +1,28 @@
+<form (ngSubmit)="onSubmit()" #notificationForm="ngForm">
+  <div>
+    <h2>Selecciona el tipo de notificación</h2>
+
+    <!-- Campo Email -->
+    <mat-radio-group [(ngModel)]="notificationType" name="notificationType" required>
+      <mat-radio-button value="email">Email</mat-radio-button>
+      <mat-radio-button value="sms">SMS</mat-radio-button>
+    </mat-radio-group>
+    <div *ngIf="notificationForm.submitted && !notificationType">
+      <p style="color: red;">Por favor selecciona un tipo de notificación.</p>
+    </div>
+  </div>
+
+  <!-- Mostrar el tipo de notificación seleccionado -->
+  <div *ngIf="notificationType">
+    <p>Has seleccionado: {{ notificationType | uppercase }}</p>
+  </div>
+
+  <!-- Botón para guardar la preferencia -->
+  <button mat-raised-button color="primary" type="submit">Guardar Preferencia</button>
+</form>
+
+<!-- Mostrar el valor guardado en sessionStorage -->
+<div *ngIf="storedNotificationType">
+  <h3>Notificación seleccionada guardada en la sesión:</h3>
+  <p>{{ storedNotificationType | uppercase }}</p>
+</div>

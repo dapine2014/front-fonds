@@ -1,0 +1,10 @@
+.idea
+.gitignore
+.git
+.editorconfig
+/.nx
+/.idea
+/node_modules
+/dist
+.vscode
+*.md

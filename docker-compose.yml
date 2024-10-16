@@ -1,0 +1,16 @@
+version: '4'
+
+services:
+  front:
+    image: front
+    container_name: front
+    environment:
+      - apiServiceUrl=https://container-service-1.6jhc9d8ymr1xp.us-east-2.cs.amazonlightsail.com/rest/api
+    ports:
+      - "70:70"  # Deja el primer puerto vacío para que Docker asigne uno aleatorio
+    networks:
+      - data_bases
+
+networks:
+  data_bases:
+    external: true

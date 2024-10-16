@@ -1,0 +1,65 @@
+/* Centrar el contenido del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los encabezados */
+h2, h3 {
+  color: #3f51b5;  /* Color azul de Angular Material */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilo de los botones */
+button {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Estilo para el radio group */
+mat-radio-group {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+/* Estilo para el texto de error */
+p {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Estilo para el valor seleccionado */
+div p {
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}
+
+/* Estilo para el valor guardado */
+div h3 {
+  margin-top: 40px;
+  color: #ff4081;  /* Color rosa Angular Material */
+  text-align: center;
+}
+
+/* Estilo responsive */
+@media (max-width: 600px) {
+  form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
