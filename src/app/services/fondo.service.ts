@@ -9,7 +9,7 @@ import {IUser} from '../components/core/IUser';
 })
 export class FondoService {
   private apiUrl: string =`${environmentProd.apiServiceUrl}`;
-  private userId: string = "b57dfe3d-cc60-47e0-bc62-bce22178c4d5";
+  private userId: string = "cb95b4dc-58be-4c86-a74c-2e8940ef2cc0";
 
   constructor(private http: HttpClient) {
   }

@@ -21,7 +21,7 @@ export class HistorialComponent implements OnInit{
 
   getHistorianData(): void {
     this.fondoService.getHistorial().subscribe((data: IUser[]) => {
-      this.userEvent = data.filter(user => user.id === 'b57dfe3d-cc60-47e0-bc62-bce22178c4d5');
+      this.userEvent = data.filter(user => user.id === 'cb95b4dc-58be-4c86-a74c-2e8940ef2cc0');
       if(this.userEvent.length > 0){
         this.historyRecor = this.userEvent[0]?.transactionHistory || [];
       }

@@ -41,6 +41,7 @@ export class FondosComponent implements OnInit{
 
 
   registrar(fondoId: string): void {
+    console.log("EL ID :", fondoId );
     this.fondoService.suscribirFondo(fondoId).subscribe((data) => {
       alert(data);
       this.getFondos();
